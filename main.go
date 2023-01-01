@@ -23,7 +23,7 @@ func main() {
 	if err := hclsimple.DecodeFile("example.hcl", nil, &stru); err != nil {
 		panic(err)
 	}
-	fmt.Printf("decode result : %#v", stru)
+	fmt.Printf("decode result : %#v\n", stru)
 	f := hclwrite.NewEmptyFile()
 	b := f.Body()
 	b.SetAttributeValue("some_value", cty.StringVal("value"))
